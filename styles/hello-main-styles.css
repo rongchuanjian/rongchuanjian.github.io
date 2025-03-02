@@ -1,7 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #f4f4f4;
+}
+
+a {
+    text-decoration: none;
+    color: #505050;
+}
+
+li {
+    list-style: none;
+}
+
+/* 设置导航栏样式 */
+.nav {
+    float: right;
+    position: relative;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+    
+.nav li {
+    float: left;
+}
+    
+.nav li a {
+    display: block;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+/* 鼠标经过时改变背景颜色和字体颜色 */    
+.nav li a:hover {
+    color: #00A1D6;
+}
+
+@media screen and (max-width: 600px) {
+    ul {
+        flex-direction: column;
+    }
+}
+
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+.navsection {
+    height: 30px;
+    line-height: 30px;
+    margin: 0 20px;
+}
+
+.navsection a {
+    font-size: 14px;
+}
+
+.navsection ul li {
+    float: left;
+    font-size: 14px;
+}
+
+.navsection .fr ul li:nth-child(even) {
+    height: 12px;
+    margin: 8px 10px 0;
+    width: 1px;
+    background-color: #505050;
+}
+
+.navsection a:hover {
+    color: #00A1D6;
 }
 
 /* 容器布局 */
@@ -93,9 +175,17 @@ body {
 /* 右侧主内容区样式 */
 .main-content {
     flex: 1;
-    padding: 20px;
+    /* padding: 20px; */
     box-sizing: border-box;
     background-color: #f5f6f7;
+}
+
+.main-content-title {
+    margin-top: 40px;
+    height: 45px;
+    padding: 20px;
+    font-size: 35px;
+    color: #00A1D6;
 }
 
 /* 搜索块样式 */
@@ -178,6 +268,8 @@ body {
 
 .project-grid {
     height: 200;
+    padding: 20px;
+    margin-top: 40px;
 }
 
 .project-grid {
@@ -245,6 +337,11 @@ table th:first-child {
     width: 80px;
     text-align: center;
 }
+
+.first-column {
+    width: 120px;
+    text-align: center;
+ }
 
 /* 城市列表样式 */
 .city-list {
@@ -322,4 +419,13 @@ table th:first-child {
     .main-content {
         width: 100%;
     }
+}
+
+/* 内容区域样式 */
+.city-grid {
+    display: none;
+}
+
+.city-grid.active {
+    display: block;
 }
